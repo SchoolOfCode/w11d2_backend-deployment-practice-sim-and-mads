@@ -25,7 +25,7 @@ PLAN FOR CREATING DELETE ROUTE:
 - this model will need to clear all tasks from the database
 */
 export async function clearList() {
-  const data = await pool.query(`DELETE FROM shopping WHERE id > 0;`);
+  const data = await pool.query(`TRUNCATE TABLE shopping;`);
   console.log("The shopping list is now:", data.rows);
   return data.rows;
 }
