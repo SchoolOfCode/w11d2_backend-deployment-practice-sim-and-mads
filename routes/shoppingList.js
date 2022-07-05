@@ -1,5 +1,4 @@
 import express from "express";
-import ClearList from "../../w11d2_frontend-deployment-sim-and-mads/src/components/ClearList/index.js";
 import {
   getShoppingList,
   postListItem,
