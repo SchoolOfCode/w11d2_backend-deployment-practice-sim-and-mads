@@ -1,7 +1,7 @@
 import { pool } from "../db/index.js";
 
 export async function getShoppingList() {
-  const data = await pool.query("SELECT * FROM shopping;");
+  const data = await pool.query(`SELECT * FROM shopping;`);
   console.log("The shopping list is", data.rows);
   return data.rows;
 }
@@ -26,6 +26,6 @@ PLAN FOR CREATING DELETE ROUTE:
 */
 export async function clearList() {
   const data = await pool.query("TRUNCATE TABLE shopping;");
-  console.log("The shopping list is now:", data.rows);
+  console.log(`The shopping list is now:`, data.rows);
   return data.rows;
 }
