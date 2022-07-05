@@ -24,6 +24,7 @@ PLAN FOR CREATING DELETE ROUTE:
 - we will need a router.delete path to send delete requests down
 - these requests will need to arrive at a model of what to do to the database
 - this model will need to clear all tasks from the database
+- CURRENTLY: WON'T LET ME DELETE TO /ITEMS, NOT SURE WHY.
 */
 
 router.delete("/items", async (req, res) => {
