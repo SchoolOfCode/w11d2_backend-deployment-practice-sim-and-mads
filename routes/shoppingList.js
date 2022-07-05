@@ -1,6 +1,10 @@
 import express from "express";
 import ClearList from "../../w11d2_frontend-deployment-sim-and-mads/src/components/ClearList/index.js";
-import { getShoppingList, postListItem } from "../models/shoppingList.js";
+import {
+  getShoppingList,
+  postListItem,
+  clearList,
+} from "../models/shoppingList.js";
 
 const router = express.Router();
 
@@ -24,7 +28,7 @@ PLAN FOR CREATING DELETE ROUTE:
 */
 
 router.delete("/items", async (req, res) => {
-  const result = await ClearList();
+  const result = await clearList();
   res.json({ success: true, payload: result });
 });
 
